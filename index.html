@@ -1,231 +1,264 @@
 <!DOCTYPE html>
 <html lang="ug" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Syria Recharge</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>سۇرىيە كارتلىرى</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:Arial,sans-serif;
+}
 
-    body {
-      margin: 0;
-      background: #0d1117;
-      color: white;
-    }
+body{
+  background:#07111f;
+  color:white;
+  min-height:100vh;
+}
 
-    .header {
-      background: #161b22;
-      padding: 25px 20px;
-      text-align: center;
-      border-bottom: 1px solid #30363d;
-    }
+.header{
+  background:linear-gradient(135deg,#0d47a1,#1565c0);
+  padding:22px 18px;
+  text-align:center;
+  box-shadow:0 4px 20px rgba(0,0,0,.35);
+}
 
-    .header h1 {
-      margin: 0;
-      font-size: 30px;
-    }
+.header h1{
+  font-size:28px;
+  margin-bottom:8px;
+}
 
-    .header p {
-      color: #8b949e;
-      margin-top: 8px;
-    }
+.header p{
+  color:#dceaff;
+  font-size:15px;
+}
 
-    .container {
-      max-width: 500px;
-      margin: 25px auto;
-      padding: 15px;
-    }
+.container{
+  width:94%;
+  max-width:600px;
+  margin:20px auto;
+}
 
-    .card {
-      background: #161b22;
-      border: 1px solid #30363d;
-      border-radius: 18px;
-      padding: 22px;
-      margin-bottom: 18px;
-    }
+.notice{
+  background:#10243d;
+  border:1px solid #1d5b91;
+  border-radius:16px;
+  padding:16px;
+  margin-bottom:18px;
+  text-align:center;
+  line-height:1.8;
+}
 
-    .card h2 {
-      margin-top: 0;
-    }
+.section-title{
+  font-size:21px;
+  margin:20px 0 12px;
+  text-align:right;
+}
 
-    label {
-      display: block;
-      margin: 15px 0 7px;
-      color: #c9d1d9;
-    }
+.card{
+  background:linear-gradient(145deg,#111f31,#0b1727);
+  border:1px solid #24415f;
+  border-radius:20px;
+  padding:18px;
+  margin-bottom:14px;
+  box-shadow:0 7px 20px rgba(0,0,0,.25);
+}
 
-    input, select {
-      width: 100%;
-      padding: 15px;
-      border-radius: 10px;
-      border: 1px solid #30363d;
-      background: #0d1117;
-      color: white;
-      font-size: 16px;
-      outline: none;
-    }
+.card-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:15px;
+}
 
-    input:focus, select:focus {
-      border-color: #2f81f7;
-    }
+.card h2{
+  font-size:22px;
+}
 
-    button {
-      width: 100%;
-      padding: 16px;
-      margin-top: 20px;
-      border: none;
-      border-radius: 10px;
-      background: #238636;
-      color: white;
-      font-size: 18px;
-      font-weight: bold;
-      cursor: pointer;
-    }
+.badge{
+  background:#0d6efd;
+  padding:7px 12px;
+  border-radius:20px;
+  font-size:13px;
+}
 
-    button:hover {
-      background: #2ea043;
-    }
+.info{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-bottom:15px;
+}
 
-    .network {
-      display: flex;
-      gap: 10px;
-      margin-top: 10px;
-    }
+.info div{
+  background:#0d1b2c;
+  border-radius:12px;
+  padding:11px;
+  text-align:center;
+}
 
-    .network button {
-      margin-top: 0;
-      background: #21262d;
-      border: 1px solid #30363d;
-    }
+.info span{
+  display:block;
+  color:#91a8c1;
+  font-size:12px;
+  margin-bottom:4px;
+}
 
-    .network button.active {
-      background: #1f6feb;
-    }
+.info strong{
+  font-size:16px;
+}
 
-    .result {
-      display: none;
-      background: #0d2818;
-      border: 1px solid #238636;
-      padding: 18px;
-      border-radius: 12px;
-      margin-top: 20px;
-      line-height: 1.8;
-    }
+.price{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:#07111f;
+  padding:12px 14px;
+  border-radius:13px;
+  margin-bottom:12px;
+}
 
-    .footer {
-      text-align: center;
-      color: #8b949e;
-      padding: 30px;
-      font-size: 14px;
-    }
-  </style>
+.price b{
+  font-size:20px;
+  color:#4ade80;
+}
+
+.btn{
+  width:100%;
+  border:0;
+  padding:14px;
+  border-radius:13px;
+  background:#16a34a;
+  color:white;
+  font-size:17px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.btn:active{
+  transform:scale(.98);
+}
+
+.contact{
+  background:#10243d;
+  border-radius:18px;
+  padding:18px;
+  margin:22px 0;
+  text-align:center;
+}
+
+.contact h2{
+  margin-bottom:10px;
+}
+
+.footer{
+  text-align:center;
+  color:#71849b;
+  padding:20px;
+  font-size:13px;
+}
+</style>
 </head>
 
 <body>
 
-  <div class="header">
-    <h1>📱 Syria Recharge</h1>
-    <p>سورىيەدىكى كارتا ۋە نومۇر قاچىلاش مۇلازىمىتى</p>
+<header class="header">
+  <h1>📡 سۇرىيە كارتلىرى</h1>
+  <p>تور ۋە ئۇچۇر يوللاش ھەققى بىلەن  </p>
+</header>
+
+<div class="container">
+
+  <div class="notice">
+    🌐 <b>تور كارتىلىرى</b><br>
+    ئۆزىڭىزگە ماس بولغان تور پىلانىنى تاللاڭ.
   </div>
 
-  <div class="container">
+  <h2 class="section-title">📶 ئايلىق تور پىلانلىرى</h2>
 
-    <div class="card">
-      <h2>💳 رېچارج قىلىش</h2>
+  <div class="card">
+    <div class="card-top">
+      <h2>1.5 GB تور</h2>
+      <span class="badge">1 ئاي</span>
+    </div>
 
-      <label>تور تاللاڭ</label>
-
-      <div class="network">
-        <button type="button" id="syriaTel" class="active"
-          onclick="chooseNetwork('SyriaTel')">
-          SyriaTel
-        </button>
-
-        <button type="button" id="mtn"
-          onclick="chooseNetwork('MTN')">
-          MTN
-        </button>
+    <div class="info">
+      <div>
+        <span>تور مىقدارى</span>
+        <strong>1.5 GB</strong>
       </div>
-
-      <label for="phone">تېلېفون نومۇرى</label>
-      <input
-        id="phone"
-        type="tel"
-        placeholder="09xxxxxxxx"
-        maxlength="10">
-
-      <label for="amount">قاچىلاش سوممىسى</label>
-
-      <select id="amount">
-        <option value="1000">1,000 ل.س</option>
-        <option value="2500">2,500 ل.س</option>
-        <option value="5000">5,000 ل.س</option>
-        <option value="10000">10,000 ل.س</option>
-        <option value="25000">25,000 ل.س</option>
-      </select>
-
-      <button onclick="recharge()">
-        قاچىلاشنى داۋاملاشتۇرۇش
-      </button>
-
-      <div class="result" id="result"></div>
+      <div>
+        <span>مۇددىتى</span>
+        <strong>30 كۈن</strong>
+      </div>
     </div>
 
-    <div class="card">
-      <h2>📋 مۇلازىمەت</h2>
-      <p>• SyriaTel رېچارج</p>
-      <p>• MTN رېچارج</p>
-      <p>• كېيىنچە ئەپ/ئويۇن رېچارج</p>
-      <p>• زاكاز تارىخى</p>
-      <p>• ئىشلەتكۈچى ھېساباتى</p>
+    <div class="price">
+      <span>سۇرىيە لىراسى</span>
+      <b>310 ل.س</b>
     </div>
 
+    <button class="btn" onclick="order('1.5 GB')">
+      تاللاش
+    </button>
   </div>
 
-  <div class="footer">
-    © 2026 Syria Recharge
+  <div class="card">
+    <div class="card-top">
+      <h2>6 GB تور</h2>
+      <span class="badge">1 ئاي</span>
+    </div>
+
+    <div class="info">
+      <div>
+        <span>تور مىقدارى</span>
+        <strong>6 GB</strong>
+      </div>
+      <div>
+        <span>مۇددىتى</span>
+        <strong>30 كۈن</strong>
+      </div>
+    </div>
+
+    <div class="price">
+      <span>سورىيە لىراسى</span>
+      <b>500 ل.س</b>
+    </div>
+
+    <button class="btn" onclick="order('6 GB')">
+      تاللاش
+    </button>
   </div>
 
-  <script>
-    let network = "SyriaTel";
+  <div class="card">
+    <div class="card-top">
+      <h2>10 GB تور</h2>
+      <span class="badge">1 ئاي</span>
+    </div>
 
-    function chooseNetwork(name) {
-      network = name;
+    <div class="info">
+      <div>
+        <span>تور مىقدارى</span>
+        <strong>10 GB</strong>
+      </div>
+      <div>
+        <span>مۇددىتى</span>
+        <strong>30 كۈن</strong>
+      </div>
+    </div>
 
-      document.getElementById("syriaTel").classList.remove("active");
-      document.getElementById("mtn").classList.remove("active");
+    <div class="price">
+      <span>سۇرىيە لىراسى</span>
+      <b>750 ل.س</b>
+    </div>
 
-      if (name === "SyriaTel") {
-        document.getElementById("syriaTel").classList.add("active");
-      } else {
-        document.getElementById("mtn").classList.add("active");
-      }
-    }
+    <button class="btn" onclick="order('10 GB')">
+      تاللاش
+    </button>
+  </div>
 
-    function recharge() {
-      const phone = document.getElementById("phone").value.trim();
-      const amount = document.getElementById("amount").value;
-      const result = document.getElementById("result");
-
-      if (phone.length < 9) {
-        alert("تېلېفون نومۇرىنى توغرا كىرگۈزۈڭ!");
-        return;
-      }
-
-      result.style.display = "block";
-
-      result.innerHTML =
-        "✅ زاكاز ئۇچۇرى تەييار!<br><br>" +
-        "📡 تور: " + network + "<br>" +
-        "📱 نومۇر: " + phone + "<br>" +
-        "💰 سومما: " + Number(amount).toLocaleString() + " ل.س<br><br>" +
-        "⚠️ ھازىرچە بۇ Demo نۇسخا. ھەقىقىي رېچارج تېخى ئۇلانمىدى.";
-    }
-  </script>
-
-</body>
-</html>
+  <div class="contact">
+    <h2>📞 ئالاقىلىشىش</h2>
+    <p
